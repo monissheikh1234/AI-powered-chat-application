@@ -2,6 +2,8 @@
 
 This is a full-stack AI-powered chat application built using **Node.js**, **React**, and **Google's Gemini API**. It enables real-time chat with an intelligent AI assistant, providing a seamless, modern interface for natural language conversations.
 
+---
+
 ## 🚀 Features
 
 - 🔥 Chat interface powered by **Gemini AI**
@@ -11,27 +13,30 @@ This is a full-stack AI-powered chat application built using **Node.js**, **Reac
 - 🌱 Environment-safe config with `.env` files
 - 🧠 Scalable and easy to extend (can integrate with other models too)
 
+---
+
 ## 📁 Project Structure
 
+```
 AI_CHAT_APP_GEMINI_NEW/
-
-├── client/ # React Frontend
-│ ├── public/
-│ ├── src/
-│ │ ├── App.js
-│ │ ├── index.js
-│ │ └── App.css
-│ ├── package.json
-│ └── .gitignore
+├── client/              # React Frontend
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── App.css
+│   ├── package.json
+│   └── .gitignore
 │
-├── server/ # Node.js Backend
-│ ├── index.js
-│ ├── .env
-│ ├── package.json
+├── server/              # Node.js Backend
+│   ├── index.js
+│   ├── .env
+│   ├── package.json
 │
 ├── README.md
+```
 
-
+---
 
 ## 🛠️ Tech Stack
 
@@ -41,41 +46,84 @@ AI_CHAT_APP_GEMINI_NEW/
 - **Environment Variables**: `.env`
 - **Version Control**: Git & GitHub
 
-## Project Demo:
-https://github.com/user-attachments/assets/f15a5c09-2922-4d00-ba12-d71539917299
+---
 
+## 📽️ Project Demo
+
+[Click to watch demo](https://github.com/user-attachments/assets/f15a5c09-2922-4d00-ba12-d71539917299)
+
+---
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
+
+```bash
 git clone https://github.com/monissheikh1234/AI-powered-chat-application.git
 cd AI-powered-chat-application
+```
 
+---
 
 ### 2. Install dependencies
+
+#### Client:
+
+```bash
 cd client
 npm install
+```
 
+#### Server:
+
+```bash
 cd ../server
 npm install
+```
 
+---
 
-### 3.Create .env file in server/
+### 3. Create `.env` file in `server/`
+
+```env
 GEMINI_API_KEY=your_google_gemini_api_key_here
 PORT=5000
+```
 
+---
 
 ### 4. Run the app
 
 #### Start backend:
+
 ```bash
 cd server
 node index.js
+```
 
+#### Start frontend:
 
-### Start frontend:
+```bash
 cd client
 npm start
+```
 
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
+---
 
+## 📄 License
+
+This project is open-source and free to use. Feel free to modify or contribute!
+
+---
+
+## 🙌 Acknowledgements
+
+- [Google Gemini API](https://ai.google.dev/)
+- [React](https://reactjs.org/)
+- [Express](https://expressjs.com/)
+
+---
+
+> Made with 💡 by [Monis Sheikh](https://github.com/monissheikh1234)
