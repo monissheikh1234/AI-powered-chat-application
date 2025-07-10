@@ -12,7 +12,9 @@ This is a full-stack AI-powered chat application built using **Node.js**, **Reac
 - 🧠 Scalable and easy to extend (can integrate with other models too)
 
 ## 📁 Project Structure
+
 AI_CHAT_APP_GEMINI_NEW/
+
 ├── client/ # React Frontend
 │ ├── public/
 │ ├── src/
@@ -64,12 +66,16 @@ PORT=5000
 
 
 ### 4. Run the app
-Start backend:
+
+#### Start backend:
+```bash
 cd server
 node index.js
 
-Start frontend:
+
+### Start frontend:
 cd client
 npm start
+
 
 
