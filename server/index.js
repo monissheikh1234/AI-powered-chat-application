@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Gemini API config
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const MODEL = 'gemini-pro'; // ✅ Correct model name
+const MODEL = 'gemini-1.5-flash'; // ✅ Correct model name
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
 // Route to handle chat messages
@@ -52,3 +52,4 @@ app.post('/api/chat', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
