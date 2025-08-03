@@ -19,17 +19,18 @@ function App() {
 
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/chat`,
+        "https://ai-powered-chat-application-backend.onrender.com/api/chat",
         { message: input }
       );
       const botMessage = { sender: "bot", text: res.data.reply };
       setChat((prev) => [...prev, botMessage]);
     } catch (err) {
       console.error("Error sending message:", err);
-      setChat((prev) => [
-        ...prev,
-        { sender: "bot", text: "⚠️ Server error. Try again later." }
-      ]);
+      const errorMessage = {
+        sender: "bot",
+        text: "⚠️ Server error. Try again later.",
+      };
+      setChat((prev) => [...prev, errorMessage]);
     }
   };
 
@@ -45,7 +46,8 @@ function App() {
       <div className="chat-box">
         {chat.map((msg, i) => (
           <div key={i} className={`chat-message ${msg.sender}`}>
-            <strong>{msg.sender === "user" ? "You" : "Gemini"}:</strong> {msg.text}
+            <strong>{msg.sender === "user" ? "You" : "Gemini"}:</strong>{" "}
+            {msg.text}
           </div>
         ))}
       </div>
