@@ -12,8 +12,8 @@ app.use(express.json());
 
 // Gemini API config
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const MODEL = 'models/gemini-1.5-flash-latest';
-const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/${MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+const MODEL = 'gemini-pro'; // ✅ Correct model name
+const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GEMINI_API_KEY}`;
 
 // Route to handle chat messages
 app.post('/api/chat', async (req, res) => {
@@ -27,6 +27,7 @@ app.post('/api/chat', async (req, res) => {
     const response = await axios.post(GEMINI_API_URL, {
       contents: [
         {
+          role: "user",
           parts: [{ text: userMessage }]
         }
       ]
