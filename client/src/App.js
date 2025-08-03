@@ -18,13 +18,18 @@ function App() {
     setInput("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/chat", {
-        message: input,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/chat`,
+        { message: input }
+      );
       const botMessage = { sender: "bot", text: res.data.reply };
       setChat((prev) => [...prev, botMessage]);
     } catch (err) {
-      console.error(err);
+      console.error("Error sending message:", err);
+      setChat((prev) => [
+        ...prev,
+        { sender: "bot", text: "⚠️ Server error. Try again later." }
+      ]);
     }
   };
 
